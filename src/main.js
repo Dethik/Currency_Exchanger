@@ -101,10 +101,12 @@ async function apiDataRUB() {
 }
 
 $(document).ready(function() {
+  $(".outputUSD").hide();
   $("#exchRates").click(function() {
     event.preventDefault();
+    $(".outputUSD").fadeIn(100)
     let userUSD = parseFloat($("#usdInput").val());
-    $(".output").html(userUSD);
+    $(".outputUSD").html(`$` + userUSD);
     $("#convertEUR").click(function() {
       event.preventDefault();
       apiDataEUR();

@@ -5,20 +5,48 @@
 </head>
 <body>
   <div class="container">
+    <div class="jumbotron">
+      <h1 class="text-center">Convert your USD TODAY!</h1>
+    </div>
     <div id="input">
       <input type="number" id="usdInput">
     </div>
     <form id="exchRates">
-      <button class="btn btn-success" type="click" class="btn" id="convertEUR">Euros!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertMXN">Pesos!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertCAD">Canadian Dollars!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertAUD">Australian Dollars!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertCNY">Renminbi!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertKRW">South Korean Wan!</button>
-      <button class="btn btn-success" type="click" class="btn" id="convertRUB">Rubles!</button>
+      <div class="row">
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertEUR">Euros!</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertMXN">Pesos!</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertCAD">Canadian Dollars!</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertAUD">Australian Dollars!</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertCNY">Renminbi!</button>
+        </div>
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertKRW">South Korean Wan!</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2">
+          <button class="btn btn-success" type="click" class="btn" id="convertRUB">Rubles!</button>
+        </div>
+      </div>
     </form>
-    <div class="output"></div>
-    <div class="outputError"></div>
+    <div class="border border-light p-3 mb-4">
+      <div class="text-center">
+        <div class="outputUSD"></div>
+        <div class="output"></div>
+        <div class="outputError"></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
