@@ -110,30 +110,37 @@ $(document).ready(function() {
     $("#convertEUR").click(function() {
       event.preventDefault();
       apiDataEUR();
+      $(".output").fadeIn(100)
     });
     $("#convertMXN").click(function() {
       event.preventDefault();
       apiDataMXN();
+      $(".output").fadeIn(100)
     });
     $("#convertCAD").click(function() {
       event.preventDefault();
       apiDataCAD();
+      $(".output").fadeIn(100)
     });
     $("#convertAUD").click(function() {
       event.preventDefault();
       apiDataAUD();
+      $(".output").fadeIn(100)
     });
     $("#convertCNY").click(function() {
       event.preventDefault();
       apiDataCNY();
+      $(".output").fadeIn(100)
     });
     $("#convertKRW").click(function() {
       event.preventDefault();
       apiDataKRW();
+      $(".output").fadeIn(100)
     });
     $("#convertRUB").click(function() {
       event.preventDefault();
       apiDataRUB();
+      $(".output").fadeIn(100)
     });
   });
 });

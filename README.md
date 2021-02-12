@@ -56,3 +56,11 @@ This project will take in a value in dollars and covert it into other forms of c
 Email: Thorgrim88@gmail.com
 
 ## Test Specs
+
+CurrExchanger();
+test: will call on the API
+expect: (response).toEqual(100)
+
+getRateEuro();
+test: will recieve response.conversion_rates.Euro
+expect: (Euro).toEqual(Euro)
