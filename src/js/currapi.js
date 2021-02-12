@@ -1,5 +1,5 @@
 /*eslint-disable*/
-export default class CurrencyExchanger {
+export default class CurrExchanger {
   static async getUSD() {
     try {
       const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
