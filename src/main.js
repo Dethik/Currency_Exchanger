@@ -89,6 +89,15 @@ function getRateZAR(response) {
     $(".output").html(`API response: ${response}`);
   }
 }
+function getRateSLL(response) {
+  let userUSD = parseFloat($("#usdInput").val());
+  if (response.conversion_rates){
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.SLL * userUSD} Sierra Leonean Leone.`);
+  } else {
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
+  }
+}
 async function apiDataEUR() {
   const response = await CurrExchanger.getUSD();
   getRateEUR(response)
@@ -124,6 +133,10 @@ async function apiDataINR() {
 async function apiDataZAR() {
   const response = await CurrExchanger.getUSD();
   getRateZAR(response)
+}
+async function apiDataSLL() {
+  const response = await CurrExchanger.getUSD();
+  getRateSLL(response)
 }
 
 $(document).ready(function() {
@@ -176,6 +189,11 @@ $(document).ready(function() {
     $("#convertZAR").click(function() {
       event.preventDefault();
       apiDataZAR();
+      $(".output").fadeIn(100)
+    })
+    $("#convertSLL").click(function() {
+      event.preventDefault();
+      apiDataSLL();
       $(".output").fadeIn(100)
     })
   });
