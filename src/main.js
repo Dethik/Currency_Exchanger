@@ -11,7 +11,7 @@ import CurrExchanger from './js/currapi.js';
 function getRateEUR(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.EUR * userUSD} Euro's.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.EUR * userUSD} Euro's.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -20,7 +20,7 @@ function getRateEUR(response) {
 function getRateMXN(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.MXN * userUSD} Peso's.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.MXN * userUSD} Peso's.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -29,7 +29,7 @@ function getRateMXN(response) {
 function getRateCAD(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.CAD * userUSD} Canadian Dollars.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.CAD * userUSD} Canadian Dollars.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -38,7 +38,7 @@ function getRateCAD(response) {
 function getRateAUD(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.AUD * userUSD} Australian Dollars`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.AUD * userUSD} Australian Dollars`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -47,7 +47,7 @@ function getRateAUD(response) {
 function getRateCNY(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.CNY * userUSD} Renminbi.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.CNY * userUSD} Renminbi.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -56,7 +56,7 @@ function getRateCNY(response) {
 function getRateKRW(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.KRW * userUSD} South Korean Won.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.KRW * userUSD} South Korean Won.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -65,7 +65,7 @@ function getRateKRW(response) {
 function getRateRUB(response) {
   let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-    $("#output").html(`Your USD's will convert into ${response.conversion_rates.RUB * userUSD} Rubles.`);
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.RUB * userUSD} Rubles.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
     $(".output").html(`API response: ${response}`);
@@ -99,17 +99,15 @@ async function apiDataRUB() {
   const response = await CurrExchanger.getUSD();
   getRateRUB(response)
 }
-console.log(CurrExchanger.getUSD())
 
 $(document).ready(function() {
   $("#exchRates").click(function() {
     event.preventDefault();
     let userUSD = parseFloat($("#usdInput").val());
-    $("#output").html(userUSD);
+    $(".output").html(userUSD);
     $("#convertEUR").click(function() {
       event.preventDefault();
       apiDataEUR();
-      console.log(apiDataEUR())
     });
     $("#convertMXN").click(function() {
       event.preventDefault();
