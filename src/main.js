@@ -3,69 +3,74 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import responseExchanger from './js/currapi.js';
 import CurrExchanger from './js/currapi.js';
 // Currencies used, EURO, Peso, CAN, AUS, CHI, Korean, Rubles
 // Intake USD into converter and have functions for each response
 // Will intake $ from input on HTML and output converted response depending on which button is pressed
 
 function getRateEUR(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.EUR * userUSD} Euro's.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateMXN(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.MXN * userUSD} Peso's.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateCAD(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.CAD * userUSD} Canadian Dollars.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateAUD(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.AUD * userUSD} Australian Dollars`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateCNY(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.CNY * userUSD} Renminbi.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateKRW(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.KRW * userUSD} South Korean Won.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
 function getRateRUB(response) {
-  let userUSD = parseFloat($("").val());
+  let userUSD = parseFloat($("#usdInput").val());
   if (response.conversion_rates){
-
+    $("#output").html(`Your USD's will convert into ${response.conversion_rates.RUB * userUSD} Rubles.`);
   } else {
-    // errors
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
   }
 }
-
 async function apiDataEUR() {
   const response = await CurrExchanger.getUSD();
   getRateEUR(response)
@@ -96,8 +101,31 @@ async function apiDataRUB() {
 }
 
 $(document).ready(function() {
-  $("#TEMPNAME").click(function() {
+  $("#exchRates").click(function() {
     event.preventDefault;
-    let userUSD = parseFloat($("#TEMPNAME").val());
+    let userUSD = parseFloat($("#usdInput").val());
+    $("#output").html(userUSD);
+    $("#convertEUR").click(function() {
+      event.preventDefault;
+      apiDataEUR();
+    })
+    $("#convertMXN").click(function() {
+      event.preventDefault;
+    })
+    $("#TEMPBTNNAME").click(function() {
+      event.preventDefault;
+    })
+    $("#TEMPBTNNAME").click(function() {
+      event.preventDefault;
+    })
+    $("#TEMPBTNNAME").click(function() {
+      event.preventDefault;
+    })
+    $("#TEMPBTNNAME").click(function() {
+      event.preventDefault;
+    })
+    $("#TEMPBTNNAME").click(function() {
+      event.preventDefault;
+    })
   })
 })
