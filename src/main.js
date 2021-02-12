@@ -71,6 +71,15 @@ function getRateRUB(response) {
     $(".output").html(`API response: ${response}`);
   }
 }
+function getRateINR(response) {
+  let userUSD = parseFloat($("#usdInput").val());
+  if (response.conversion_rates){
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.INR * userUSD} Indian Rupees.`);
+  } else {
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
+  }
+}
 async function apiDataEUR() {
   const response = await CurrExchanger.getUSD();
   getRateEUR(response)
@@ -98,6 +107,10 @@ async function apiDataKRW() {
 async function apiDataRUB() {
   const response = await CurrExchanger.getUSD();
   getRateRUB(response)
+}
+async function apiDataINR() {
+  const response = await CurrExchanger.getUSD();
+  getRateINR(response)
 }
 
 $(document).ready(function() {
@@ -140,6 +153,11 @@ $(document).ready(function() {
     $("#convertRUB").click(function() {
       event.preventDefault();
       apiDataRUB();
+      $(".output").fadeIn(100)
+    });
+    $("#convertINR").click(function() {
+      event.preventDefault();
+      apiDataINR();
       $(".output").fadeIn(100)
     });
   });
