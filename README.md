@@ -21,7 +21,7 @@ This project will take in a value in dollars and covert it into other forms of c
 
 ### Without Github template clone:
 
-* Clone Repo
+* Clone Repo from https://github.com/Dethik/Currency_Exchanger
 * CD to the repository
 * Delete .git if needing a clean commit history
 * Initilize git
