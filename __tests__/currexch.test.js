@@ -1,0 +1,1 @@
+import CurrencyExchanger from '../src/currexch.js';

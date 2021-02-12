@@ -57,4 +57,4 @@ Email: Thorgrim88@gmail.com
 
 ## Test Specs
 
-[Tests](__tests__/test.js)
+[Currency Tests](__tests__/currexch.test.js)
