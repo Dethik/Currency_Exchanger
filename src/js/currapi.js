@@ -1,16 +1,14 @@
 /*eslint-disable*/
-export class CurrencyExchanger {
-  static get() {
-    return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`)
-    .then(function(response) {
+export default class CurrencyExchanger {
+  static async getUSD() {
+    try {
+      const response = await fetch (`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/USD`);
       if (!response.ok) {
         throw Error(response.statusText);
       }
       return response.json();
-    })
-    .catch(function(error) {
-      return error;
-    });
+    } catch (error) {
+      return error.message;
+    }
   }
 }
-

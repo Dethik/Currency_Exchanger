@@ -56,5 +56,3 @@ This project will take in a value in dollars and covert it into other forms of c
 Email: Thorgrim88@gmail.com
 
 ## Test Specs
-
-[Currency Tests](__tests__/currexch.test.js)
