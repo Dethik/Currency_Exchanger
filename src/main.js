@@ -80,6 +80,15 @@ function getRateINR(response) {
     $(".output").html(`API response: ${response}`);
   }
 }
+function getRateZAR(response) {
+  let userUSD = parseFloat($("#usdInput").val());
+  if (response.conversion_rates){
+    $(".output").html(`Your USD's will convert into ${response.conversion_rates.ZAR * userUSD} South African rand.`);
+  } else {
+    $(".outputError").html(`api error message: ${response['error-type']}`);
+    $(".output").html(`API response: ${response}`);
+  }
+}
 async function apiDataEUR() {
   const response = await CurrExchanger.getUSD();
   getRateEUR(response)
@@ -111,6 +120,10 @@ async function apiDataRUB() {
 async function apiDataINR() {
   const response = await CurrExchanger.getUSD();
   getRateINR(response)
+}
+async function apiDataZAR() {
+  const response = await CurrExchanger.getUSD();
+  getRateZAR(response)
 }
 
 $(document).ready(function() {
@@ -160,5 +173,10 @@ $(document).ready(function() {
       apiDataINR();
       $(".output").fadeIn(100)
     });
+    $("#convertZAR").click(function() {
+      event.preventDefault();
+      apiDataZAR();
+      $(".output").fadeIn(100)
+    })
   });
 });
