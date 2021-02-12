@@ -99,40 +99,40 @@ async function apiDataRUB() {
   const response = await CurrExchanger.getUSD();
   getRateRUB(response)
 }
-console.log(apiDataEUR());
-console.log(getRateEUR());
+console.log(CurrExchanger.getUSD())
 
 $(document).ready(function() {
   $("#exchRates").click(function() {
-    event.preventDefault;
+    event.preventDefault();
     let userUSD = parseFloat($("#usdInput").val());
     $("#output").html(userUSD);
     $("#convertEUR").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataEUR();
+      console.log(apiDataEUR())
     });
     $("#convertMXN").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataMXN();
     });
     $("#convertCAD").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataCAD();
     });
     $("#convertAUD").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataAUD();
     });
     $("#convertCNY").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataCNY();
     });
     $("#convertKRW").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataKRW();
     });
     $("#convertRUB").click(function() {
-      event.preventDefault;
+      event.preventDefault();
       apiDataRUB();
     });
   });
