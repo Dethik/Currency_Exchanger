@@ -1,1 +1,1 @@
-import CurrencyExchanger from '../src/currexch.js';
+import CurrencyExchanger from '../src/js/currapi.js';
