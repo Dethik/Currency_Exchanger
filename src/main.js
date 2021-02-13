@@ -96,50 +96,50 @@ function getRateSLL(response) {
 }
 async function apiDataEUR() {
   const response = await CurrExchanger.getUSD();
-  getRateEUR(response)
+  getRateEUR(response);
 }
 async function apiDataMXN() {
   const response = await CurrExchanger.getUSD();
-  getRateMXN(response)
+  getRateMXN(response);
 }
 async function apiDataCAD() {
   const response = await CurrExchanger.getUSD();
-  getRateCAD(response)
+  getRateCAD(response);
 }
 async function apiDataAUD() {
   const response = await CurrExchanger.getUSD();
-  getRateAUD(response)
+  getRateAUD(response);
 }
 async function apiDataCNY() {
   const response = await CurrExchanger.getUSD();
-  getRateCNY(response)
+  getRateCNY(response);
 }
 async function apiDataKRW() {
   const response = await CurrExchanger.getUSD();
-  getRateKRW(response)
+  getRateKRW(response);
 }
 async function apiDataRUB() {
   const response = await CurrExchanger.getUSD();
-  getRateRUB(response)
+  getRateRUB(response);
 }
 async function apiDataINR() {
   const response = await CurrExchanger.getUSD();
-  getRateINR(response)
+  getRateINR(response);
 }
 async function apiDataZAR() {
   const response = await CurrExchanger.getUSD();
-  getRateZAR(response)
+  getRateZAR(response);
 }
 async function apiDataSLL() {
   const response = await CurrExchanger.getUSD();
-  getRateSLL(response)
+  getRateSLL(response);
 }
 
 $(document).ready(function() {
   $(".outputUSD").hide();
   $("#exchRates").click(function() {
     event.preventDefault();
-    $(".outputUSD").fadeIn(100)
+    $(".outputUSD").fadeIn(100);
     let userUSD = parseFloat($("#usdInput").val());
     $(".outputUSD").html(`$` + userUSD);
     $("#convertEUR").click(function() {
