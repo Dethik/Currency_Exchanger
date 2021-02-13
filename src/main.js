@@ -1,12 +1,8 @@
-/*eslint-disable*/
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import CurrExchanger from './js/currapi.js';
-// Currencies used, EURO, Peso, CAN, AUS, CHI, Korean, Rubles
-// Intake USD into converter and have functions for each response
-// Will intake $ from input on HTML and output converted response depending on which button is pressed
 
 function getRateEUR(response) {
   let userUSD = parseFloat($("#usdInput").val());
@@ -149,52 +145,52 @@ $(document).ready(function() {
     $("#convertEUR").click(function() {
       event.preventDefault();
       apiDataEUR();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertMXN").click(function() {
       event.preventDefault();
       apiDataMXN();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertCAD").click(function() {
       event.preventDefault();
       apiDataCAD();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertAUD").click(function() {
       event.preventDefault();
       apiDataAUD();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertCNY").click(function() {
       event.preventDefault();
       apiDataCNY();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertKRW").click(function() {
       event.preventDefault();
       apiDataKRW();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertRUB").click(function() {
       event.preventDefault();
       apiDataRUB();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertINR").click(function() {
       event.preventDefault();
       apiDataINR();
-      $(".output").fadeIn(100)
+      $(".output").fadeIn(100);
     });
     $("#convertZAR").click(function() {
       event.preventDefault();
       apiDataZAR();
-      $(".output").fadeIn(100)
-    })
+      $(".output").fadeIn(100);
+    });
     $("#convertSLL").click(function() {
       event.preventDefault();
       apiDataSLL();
-      $(".output").fadeIn(100)
-    })
+      $(".output").fadeIn(100);
+    });
   });
 });
