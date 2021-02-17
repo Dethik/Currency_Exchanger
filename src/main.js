@@ -10,7 +10,7 @@ function getRateEUR(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.EUR * userUSD} Euro's.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateMXN(response) {
@@ -19,7 +19,7 @@ function getRateMXN(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.MXN * userUSD} Peso's.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateCAD(response) {
@@ -28,7 +28,7 @@ function getRateCAD(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.CAD * userUSD} Canadian Dollars.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateAUD(response) {
@@ -37,7 +37,7 @@ function getRateAUD(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.AUD * userUSD} Australian Dollars`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateCNY(response) {
@@ -46,7 +46,7 @@ function getRateCNY(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.CNY * userUSD} Renminbi.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateKRW(response) {
@@ -55,7 +55,7 @@ function getRateKRW(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.KRW * userUSD} South Korean Won.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateRUB(response) {
@@ -64,7 +64,7 @@ function getRateRUB(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.RUB * userUSD} Rubles.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateINR(response) {
@@ -73,7 +73,7 @@ function getRateINR(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.INR * userUSD} Indian Rupees.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateZAR(response) {
@@ -82,7 +82,7 @@ function getRateZAR(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.ZAR * userUSD} South African rand.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 function getRateSLL(response) {
@@ -91,7 +91,7 @@ function getRateSLL(response) {
     $(".output").html(`Your USD's will convert into ${response.conversion_rates.SLL * userUSD} Sierra Leonean Leone.`);
   } else {
     $(".outputError").html(`api error message: ${response['error-type']}`);
-    $(".output").html(`API response: ${response}`);
+    $(".output").html(`API response: ${response.message}`);
   }
 }
 async function apiDataEUR() {

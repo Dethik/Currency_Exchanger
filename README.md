@@ -6,20 +6,22 @@
 
 ## Technologies Used
 
-* HTML
+** Bootstrap 4.6.0
 * CSS
-* Bootstrap
-* Markdown
-* JavaScript
-* Jquery
+* eslint 6.3.0
+* HTML
+* JavaScript ES6
+* Jest 24.9.0
+* jQuery 3.5.1
+* Node Package Manager 6.14.9
+* Postman 8.0.4
+* webpack 4.39.3
 
 ## Description
 
 This project will take in a value in dollars and covert it into other forms of currency.
 
 ## Setup/Installation Requirements
-
-### Without Github template clone:
 
 * Clone Repo from https://github.com/Dethik/Currency_Exchanger
 * CD to the repository
@@ -30,17 +32,8 @@ This project will take in a value in dollars and covert it into other forms of c
 * Open new repo to begin npm initilization
 * Go to https://www.exchangerate-api.com/ to obtain an API key.
 * Make a .env file and add API_KEY = (API KEY HERE) without the parenthesis
-
-### Npm Initilization
-
-* Verify package.json has correct npm packages for needs
-* Modify title on line 18 of webpack.config.js
-* Modify title on line 2 of package.json
-* Modify description on line 19 of package.json
-* Modify title on line 2 if package-lock.json
-* Run ```npm init -y```
 * Run ```npm install```
-* Verify install works by running ```npm run test``` and ```npm run build```
+* Verify install works by running ```npm run build```
 
 * * *
 ## Known Bugs
@@ -57,11 +50,7 @@ Email: Thorgrim88@gmail.com
 
 ## Test Specs
 ```js
-CurrExchanger();
-test: will call on the API
-expect: (response).toEqual(100)
-
 getRateEuro();
 test: will recieve response.conversion_rates.Euro
-expect: (Euro).toEqual(Euro)
+expect: (getRateEuro(10)).toEqual("You have 7 Euros")
 ```
